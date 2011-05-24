@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<jboss-web>
+    <resource-ref>
+       <res-ref-name>infinispan/web</res-ref-name>
+       <jndi-name>java:jboss/infinispan/web</jndi-name>
+       <res-type>org.infinispan.manager.EmbeddedCacheManager</res-type>
+    </resource-ref>
+</jboss-web>

@@ -39,11 +39,13 @@ import javax.servlet.http.HttpServletResponse;
 public class PingServlet extends HttpServlet
 {
    @Inject
-   private PingerInfo info;
+   private PingRepository repository;
 
    @Override
    protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException
    {
+      PingerInfo info = repository.getPiger();
+
       if (req.getParameter("cleanup") != null)
          info.setName(null);
 
@@ -52,6 +54,7 @@ public class PingServlet extends HttpServlet
       {
          name = req.getParameter("name");
          info.setName(name);
+         repository.updatePinger();
       }
 
       System.out.println("Name: " + name);

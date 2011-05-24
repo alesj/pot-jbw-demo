@@ -23,30 +23,12 @@
 
 package org.openblend.pot;
 
-import java.io.Serializable;
-import javax.enterprise.context.SessionScoped;
-
 /**
  * @author <a href="mailto:ales.justin@jboss.org">Ales Justin</a>
  */
-public class PingerInfo implements Serializable
+public interface PingRepository
 {
-   private static final long serialVersionUID = 1L;
-   private String name;
+   PingerInfo getPiger();
 
-   public String getName()
-   {
-      return name;
-   }
-
-   public void setName(String name)
-   {
-      this.name = name;
-   }
-
-   @Override
-   public String toString()
-   {
-      return super.toString() + " - " + name;
-   }
+   void updatePinger();
 }
