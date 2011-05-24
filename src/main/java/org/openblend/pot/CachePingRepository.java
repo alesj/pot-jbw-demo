@@ -67,7 +67,7 @@ public class CachePingRepository implements PingRepository
    public Cache<String, PingerInfo> getCache()
    {
       if (cache == null)
-         cache = getManager().getCache("POT_Cache", true);
+         cache = getManager().getCache("repl-async", false);
 
       return cache;
    }
