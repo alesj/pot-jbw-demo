@@ -11,5 +11,7 @@
         <servlet-name>ping</servlet-name>
         <url-pattern>/*</url-pattern>
     </servlet-mapping>
+
+    <distributable />
 </web-app>
 
